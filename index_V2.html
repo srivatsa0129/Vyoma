@@ -1,0 +1,1595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>RTG Sanskrit Project | Vyoma & Aapatsahaaya Foundation</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Merriweather:wght@700;900&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --primary-orange: #e67e22;
+  --primary-blue: #2c5f8d;
+  --primary-dark: #1a3d5c;
+  --accent-teal: #16a085;
+  --warm-beige: #f5f1e8;
+  --light-gray: #f9f9f9;
+  --text-dark: #333333;
+  --text-light: #666666;
+  --white: #ffffff;
+  --border-light: #e0e0e0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: var(--white);
+  color: var(--text-dark);
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+/* UTILITY CLASSES */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section {
+  padding: 60px 0;
+}
+
+.section-title {
+  font-family: 'Merriweather', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--text-light);
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto 3rem;
+}
+
+/* TOP BAR */
+.top-bar {
+  background: var(--primary-dark);
+  color: var(--white);
+  padding: 15px 0;
+  font-size: 0.9rem;
+}
+
+.top-bar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.top-bar-text {
+  flex: 1;
+  text-align: center;
+}
+
+.top-bar-logos {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.logo-img {
+  height: 50px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.3));
+}
+
+.logo-img:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(3px 3px 6px rgba(0,0,0,0.4));
+}
+
+/* HEADER / HERO */
+.hero {
+  background-color: white;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: var(--white);
+  padding: 80px 0 100px;
+  position: relative;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  color: #1a3d5c;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.hero h1 {
+  font-family: 'Merriweather', serif;
+  font-size: 2.8rem;
+  font-weight: 900;
+  line-height: 1.3;
+  text-align: center;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
+  padding: 0 20px;
+}
+
+.hero-tagline {
+  font-size: 1.3rem;
+  text-align: center;
+  margin-top: 30px;
+  font-weight: 400;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.98;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+  position: relative;
+  z-index: 2;
+}
+
+/* IMPACT STATS BAR */
+.impact-bar {
+  
+  color: #1a3d5c;
+  padding: 30px 0;
+  margin-top: -50px;
+  position: relative;
+  z-index: 10;
+}
+
+.impact-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  text-align: center;
+}
+
+.stat-item h3 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.stat-item p {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* OVERVIEW SECTION */
+.overview-section {
+  background: var(--warm-beige);
+}
+
+.overview-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.overview-text {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: var(--text-dark);
+}
+
+.overview-text strong {
+  color: var(--primary-blue);
+}
+
+.overview-image img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* PROGRAMS GRID */
+.programs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.program-card {
+  background: var(--white);
+  border: 2px solid var(--border-light);
+  border-radius: 8px;
+  padding: 35px 25px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.program-card:hover {
+  border-color: var(--primary-orange);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(230, 126, 34, 0.15);
+}
+
+.program-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.program-card h3 {
+  font-size: 1.3rem;
+  color: var(--primary-dark);
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.program-card p {
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
+
+/* QUOTE HIGHLIGHT */
+.quote-section {
+  background: var(--light-gray);
+  padding: 60px 20px;
+}
+
+.quote-box {
+  max-width: 900px;
+  margin: 0 auto;
+  background: var(--white);
+  border-left: 6px solid var(--accent-teal);
+  padding: 40px 50px;
+  border-radius: 8px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.quote-box p {
+  font-size: 1.3rem;
+  font-style: italic;
+  color: var(--text-dark);
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.quote-box strong {
+  color: var(--primary-blue);
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* SCHOOLS SECTION */
+.schools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 35px;
+}
+
+.school-card {
+  background: var(--white);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.school-card:hover {
+  box-shadow: 0 10px 35px rgba(0,0,0,0.15);
+  transform: translateY(-8px);
+}
+
+.school-header {
+  background: var(--primary-blue);
+  color: var(--white);
+  padding: 25px 20px;
+  text-align: center;
+}
+
+.school-header h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.school-logo {
+  background: var(--white);
+  padding: 20px;
+  text-align: center;
+}
+
+.school-logo img {
+  width: 100%;
+  max-height: 120px;
+  object-fit: contain;
+}
+
+.school-map {
+  width: 100%;
+  height: 250px;
+  border: none;
+}
+
+/* IMPLEMENTATION LIST */
+.implementation-list {
+  max-width: 900px;
+  margin: 0 auto;
+  background: var(--warm-beige);
+  padding: 40px 50px;
+  border-radius: 8px;
+}
+
+.implementation-list ul {
+  list-style: none;
+}
+
+.implementation-list li {
+  padding: 15px 0 15px 40px;
+  position: relative;
+  font-size: 1.1rem;
+  color: var(--text-dark);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.implementation-list li:last-child {
+  border-bottom: none;
+}
+
+.implementation-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 15px;
+  width: 28px;
+  height: 28px;
+  background: var(--accent-teal);
+  color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* PARTNERS SECTION */
+.partners-section {
+  background: var(--light-gray);
+}
+
+.partners-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.partner-card {
+  background: var(--white);
+  border-radius: 8px;
+  padding: 40px 30px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.partner-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.partner-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.partner-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.partner-card a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.partner-logo {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  transition: transform 0.4s ease;
+}
+
+.partner-card:hover .partner-logo {
+  transform: scale(1.1) rotate(2deg);
+}
+
+.partner-logo img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: filter 0.3s ease;
+}
+
+.partner-card:hover .partner-logo img {
+  filter: brightness(1.1);
+}
+
+.partner-card h3 {
+  color: var(--primary-dark);
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.partner-card:hover h3 {
+  color: var(--primary-orange);
+}
+
+.partner-card p {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.partner-card:hover p {
+  color: var(--text-dark);
+}
+
+/* VIDEO GALLERY */
+.video-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.video-wrapper {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.video-wrapper:hover {
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  transform: translateY(-5px);
+}
+
+.video-wrapper iframe {
+  width: 100%;
+  height: 280px;
+  border: none;
+  display: block;
+}
+
+/* CTA SECTION */
+.cta-section {
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-dark) 100%);
+  color: var(--white);
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.cta-section h2 {
+  color: var(--white);
+  margin-bottom: 1.5rem;
+}
+
+.cta-section p {
+  font-size: 1.2rem;
+  margin-bottom: 2.5rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 15px 40px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.btn-primary {
+  background: var(--primary-orange);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background: #d35400;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(230, 126, 34, 0.3);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--white);
+  border: 2px solid var(--white);
+}
+
+.btn-secondary:hover {
+  background: var(--white);
+  color: var(--primary-blue);
+}
+
+.cta-links {
+  margin-top: 25px;
+}
+
+.cta-links a {
+  color: var(--white);
+  text-decoration: underline;
+  margin: 0 15px;
+  font-size: 1rem;
+  transition: opacity 0.3s ease;
+}
+
+.cta-links a:hover {
+  opacity: 0.8;
+}
+
+/* FOOTER */
+footer {
+  background: var(--text-dark);
+  color: var(--white);
+  padding: 40px 20px 25px;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-info {
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.footer-info a{
+  color: white;
+  text-decoration: none;
+}
+
+.footer-info strong {
+  color: var(--primary-orange);
+}
+
+.social-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  margin: 25px 0;
+}
+
+.social-links a {
+  color: var(--white);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.social-links a:hover {
+  color: var(--primary-orange);
+}
+
+.footer-bottom {
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* COMPONENTS IMAGE */
+.components-visual {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.components-visual img {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 5px 15px rgba(0,0,0,0.1));
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 992px) {
+  .top-bar .container {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .top-bar-logos {
+    order: -1;
+  }
+  
+  .overview-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .schools-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .partners-grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .top-bar-logos {
+    gap: 20px;
+  }
+  
+  .logo-img {
+    height: 40px;
+  }
+  
+  .hero {
+    padding: 50px 0 70px;
+    min-height: 400px;
+    background-attachment: scroll;
+  }
+  
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+  
+  .hero-tagline {
+    font-size: 1.1rem;
+  }
+  
+  .impact-stats {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .stat-item h3 {
+    font-size: 2rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .section {
+    padding: 40px 0;
+  }
+  
+  .programs-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .partners-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  
+  .quote-box {
+    padding: 30px 25px;
+  }
+  
+  .quote-box p {
+    font-size: 1.1rem;
+  }
+  
+  .implementation-list {
+    padding: 30px 25px;
+  }
+  
+  .implementation-list li {
+    font-size: 1rem;
+    padding-left: 35px;
+  }
+  
+  .video-gallery {
+    grid-template-columns: 1fr;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .social-links {
+    flex-wrap: wrap;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-img {
+    height: 35px;
+  }
+  
+  .hero {
+    min-height: 350px;
+    padding: 40px 0 60px;
+  }
+  
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+  
+  .hero-tagline {
+    font-size: 1rem;
+  }
+  
+  .section-title {
+    font-size: 1.7rem;
+  }
+  
+  .program-card {
+    padding: 25px 20px;
+  }
+  
+  .partners-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .partner-card {
+    padding: 30px 20px;
+  }
+}
+
+/* SMOOTH ANIMATIONS */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.fade-in {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+/* Apply animations to various elements */
+.hero-content {
+  opacity: 0;
+  animation: fadeInUp 1s ease 0.2s forwards;
+}
+
+.hero-tagline {
+  opacity: 0;
+  animation: fadeInUp 1s ease 0.4s forwards;
+}
+
+.logo-img {
+  opacity: 0;
+  animation: scaleIn 0.8s ease 0.3s forwards;
+}
+
+.section-title {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.section-subtitle {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease 0.1s forwards;
+}
+
+.overview-text {
+  opacity: 0;
+  animation: fadeInLeft 1s ease 0.3s forwards;
+}
+
+.overview-image {
+  opacity: 0;
+  animation: fadeInRight 1s ease 0.3s forwards;
+}
+
+.overview-image img {
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.overview-image img:hover {
+  transform: scale(1.05) rotate(1deg);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.program-card {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.program-card:nth-child(1) { animation-delay: 0.1s; }
+.program-card:nth-child(2) { animation-delay: 0.2s; }
+.program-card:nth-child(3) { animation-delay: 0.3s; }
+.program-card:nth-child(4) { animation-delay: 0.4s; }
+.program-card:nth-child(5) { animation-delay: 0.5s; }
+.program-card:nth-child(6) { animation-delay: 0.6s; }
+
+.program-icon {
+  transition: transform 0.4s ease;
+  display: inline-block;
+}
+
+.program-card:hover .program-icon {
+  transform: scale(1.2) rotate(10deg);
+  animation: pulse 1s ease infinite;
+}
+
+.school-card {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.school-card:nth-child(1) { animation-delay: 0.1s; }
+.school-card:nth-child(2) { animation-delay: 0.2s; }
+.school-card:nth-child(3) { animation-delay: 0.3s; }
+
+.school-header {
+  position: relative;
+  overflow: hidden;
+}
+
+.school-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.school-card:hover .school-header::before {
+  left: 100%;
+}
+
+.school-logo img {
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.school-card:hover .school-logo img {
+  transform: scale(1.1) rotate(-2deg);
+  filter: brightness(1.1);
+}
+
+.school-map {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.school-card:hover .school-map {
+  transform: scale(1.02);
+}
+
+.implementation-list li {
+  opacity: 0;
+  animation: fadeInLeft 0.6s ease forwards;
+  transition: all 0.3s ease;
+}
+
+.implementation-list li:nth-child(1) { animation-delay: 0.1s; }
+.implementation-list li:nth-child(2) { animation-delay: 0.2s; }
+.implementation-list li:nth-child(3) { animation-delay: 0.3s; }
+.implementation-list li:nth-child(4) { animation-delay: 0.4s; }
+.implementation-list li:nth-child(5) { animation-delay: 0.5s; }
+.implementation-list li:nth-child(6) { animation-delay: 0.6s; }
+
+.implementation-list li::before {
+  transition: all 0.3s ease;
+}
+
+.implementation-list li:hover {
+  padding-left: 50px;
+  color: var(--primary-blue);
+}
+
+.implementation-list li:hover::before {
+  transform: scale(1.2) rotate(360deg);
+  background: var(--primary-orange);
+}
+
+.quote-box {
+  opacity: 0;
+  animation: scaleIn 1s ease 0.2s forwards;
+  position: relative;
+}
+
+.quote-box::after {
+  content: '"';
+  position: absolute;
+  bottom: 10px;
+  right: 30px;
+  font-size: 6rem;
+  color: rgba(22, 160, 133, 0.1);
+  font-family: Georgia, serif;
+}
+
+.video-wrapper {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.video-wrapper:nth-child(1) { animation-delay: 0.1s; }
+.video-wrapper:nth-child(2) { animation-delay: 0.2s; }
+.video-wrapper:nth-child(3) { animation-delay: 0.3s; }
+
+.video-wrapper iframe {
+  transition: transform 0.3s ease;
+}
+
+.video-wrapper:hover iframe {
+  transform: scale(1.02);
+}
+
+.components-visual img {
+  opacity: 0;
+  animation: scaleIn 1s ease 0.3s forwards;
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.components-visual img:hover {
+  transform: scale(1.08) rotate(2deg);
+  filter: drop-shadow(0 10px 25px rgba(0,0,0,0.2));
+}
+
+.stat-item {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
+  transition: transform 0.3s ease;
+}
+
+.stat-item:nth-child(1) { animation-delay: 0.1s; }
+.stat-item:nth-child(2) { animation-delay: 0.2s; }
+.stat-item:nth-child(3) { animation-delay: 0.3s; }
+
+.stat-item:hover {
+  transform: translateY(-5px) scale(1.05);
+}
+
+.stat-item h3 {
+  transition: color 0.3s ease;
+}
+
+.stat-item:hover h3 {
+  color: var(--primary-dark);
+  animation: pulse 0.5s ease;
+}
+
+.btn {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s ease, height 0.6s ease;
+  z-index: -1;
+}
+
+.btn:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.btn-primary::after {
+  content: '→';
+  margin-left: 8px;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.btn-primary:hover::after {
+  transform: translateX(5px);
+}
+
+.social-links a {
+  position: relative;
+  overflow: hidden;
+}
+
+.social-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary-orange);
+  transition: width 0.3s ease;
+}
+
+.social-links a:hover::after {
+  width: 100%;
+}
+
+.cta-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-section::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+  animation: float 8s ease-in-out infinite;
+}
+
+/* Scroll progress bar */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-orange), var(--accent-teal));
+  z-index: 9999;
+  transition: width 0.1s ease;
+}
+
+/* Loading animation for images */
+.overview-image img,
+.school-logo img,
+.partner-logo img,
+.components-visual img {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+.overview-image img[src],
+.school-logo img[src],
+.partner-logo img[src],
+.components-visual img[src] {
+  background: none;
+  animation: none;
+}
+</style>
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  <div class="container">
+    <div class="top-bar-logos">
+      <a href="https://www.vyoma.org" target="_blank">
+      <img src="https://i.ibb.co/4Zm9kHqp/New-Vyoma-whjite.png" alt="Vyoma Logo" class="logo-img">
+      </a>
+      <!-- <div class="top-bar-text">Empowering Rural, Tribal & Government School Children</div> -->
+       <a href="https://aapatsahaaya.org/" target="_blank">
+      <img src="https://i.ibb.co/KpK4TZDf/AFN.png" alt="Aapatsahaaya Foundation Logo" class="logo-img">
+      </a>
+    </div>
+    <div class="social-links">
+  <a href="https://www.youtube.com/@vyoma-samskrta-pathasala" target="_blank" aria-label="YouTube">
+    <i class="fab fa-youtube"></i>
+  </a>
+  <a href="https://www.instagram.com/sanskrit_from_home/" target="_blank" aria-label="Instagram">
+    <i class="fab fa-instagram"></i>
+  </a>
+  <a href="https://www.linkedin.com/company/vyoma-linguistic-labs-foundation/" target="_blank" aria-label="LinkedIn">
+    <i class="fab fa-linkedin-in"></i>
+  </a>
+  <a href="https://www.facebook.com/Vyomalabs" target="_blank" aria-label="Facebook">
+    <i class="fab fa-facebook-f"></i>
+  </a>
+</div>
+  </div>
+</div>
+
+<!-- HERO SECTION -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <h1>Enrichment Sessions, Linguistic Skill Development & Indian Knowledge Classes for RTG Schools</h1>
+    </div>
+    <p class="hero-tagline">Empowering communities with the Power of Saṃskṛta, Saṃskṛti & Saṃskāra</p>
+  </div>
+</section>
+
+<!-- IMPACT STATS -->
+<section class="impact-bar">
+  <div class="container">
+    <div class="impact-stats">
+      <div class="stat-item">
+        <h3>3</h3>
+        <p>Active Schools</p>
+      </div>
+      <div class="stat-item">
+        <h3>500+</h3>
+        <p>Students Impacted</p>
+      </div>
+      <div class="stat-item">
+        <h3>6</h3>
+        <p>Core Programs</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OVERVIEW -->
+<section class="section overview-section">
+  <div class="container">
+    <h2 class="section-title">Project Overview</h2>
+    <p class="section-subtitle">Bringing transformative Sanskrit-based learning to India's heartland communities</p>
+    <div class="overview-grid">
+      <div class="overview-text">
+        <p>
+          A joint initiative by <strong>Vyoma Linguistic Labs Foundation</strong> and <strong>Aapatsahaaya Foundation</strong>,
+          this project bridges ancient wisdom with modern education. We work with rural, tribal, and government schools to create holistic learning experiences that nurture both intellect and character.
+        </p>
+        <p style="margin-top: 20px;">
+          Through carefully designed programs combining Sanskrit language skills, cultural values, and practical life skills, we're creating a generation of confident, culturally-rooted learners.
+        </p>
+      </div>
+      <div class="overview-image">
+        <img src="https://i.ibb.co/TqJhSZgG/Cover-Photo.jpg" alt="Project Overview">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAMS -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Our Programs</h2>
+    <p class="section-subtitle">Comprehensive learning experiences that transform lives</p>
+    <div class="programs-grid">
+      <div class="program-card">
+        <span class="program-icon">🕉️</span>
+        <h3>Śloka Recitation & Chanting</h3>
+        <p>Immersive spiritual experiences through traditional verse recitation and devotional singing</p>
+      </div>
+      <div class="program-card">
+        <span class="program-icon">📚</span>
+        <h3>Sanskrit Basics</h3>
+        <p>Engaging learning through stories, songs, and interactive multimedia content</p>
+      </div>
+      <div class="program-card">
+        <span class="program-icon">🧘</span>
+        <h3>Yoga & Mindfulness</h3>
+        <p>Holistic development for body, mind, and spirit through ancient practices</p>
+      </div>
+      <div class="program-card">
+        <span class="program-icon">🎨</span>
+        <h3>Creative Activities</h3>
+        <p>Coloring, crafts, and educational games that make learning joyful</p>
+      </div>
+      <div class="program-card">
+        <span class="program-icon">🐄</span>
+        <h3>Cow Awareness</h3>
+        <p>Understanding our cultural heritage and ecological responsibility</p>
+      </div>
+      <div class="program-card">
+        <span class="program-icon">👨‍🏫</span>
+        <h3>Teacher Training</h3>
+        <p>Building capacity and empowering educators for sustainable impact</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPONENTS VISUAL -->
+<section>
+    <div style="text-align: center;">
+      <img src="https://i.ibb.co/Hp7r6dMY/components-1.png" alt="Components Illustration" style="max-width: 400px; width: 100%; height: auto;" />
+    </div>
+  </section>
+
+<!-- QUOTE SECTION -->
+<section class="quote-section">
+  <div class="container">
+    <div class="quote-box">
+      <p>"Why is a triangle with two equal sides called an isosceles triangle?"</p>
+      <p>Teaching it as <strong>sama-dvi-bhuja-trikoṇa</strong> brings clarity, understanding, and joy to learning — connecting modern education with the precision and beauty of Sanskrit.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SCHOOLS IN ACTION -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Where We Work</h2>
+    <p class="section-subtitle">Partnering with dedicated schools to create lasting change</p>
+    <div class="schools-grid">
+      
+      <div class="school-card">
+        <div class="school-header">
+          <h3>VGKK Tribal School</h3>
+          <p>BR Hills, Karnataka</p>
+        </div>
+        <div class="school-logo">
+          <img src="https://i.ibb.co/W4Hw3tKc/vgkk-logo.png" alt="VGKK Logo">
+        </div>
+        <iframe class="school-map" src="https://www.google.com/maps?q=VGKK+Residential+School&output=embed" title="VGKK Location"></iframe>
+      </div>
+
+      <div class="school-card">
+        <div class="school-header">
+          <h3>Veena Makkala Mandira</h3>
+          <p>Tyamagondlu, Karnataka</p>
+        </div>
+        <div class="school-logo">
+          <img src="https://i.ibb.co/20XTKcM9/veena-logo.png" alt="Veena Logo">
+        </div>
+        <iframe class="school-map" src="https://www.google.com/maps?q=Veena+Makkala+Mandira,+Tyamagondlu&output=embed" title="Veena Location"></iframe>
+      </div>
+
+      <div class="school-card">
+        <div class="school-header">
+          <h3>Bhavan's BBMP School</h3>
+          <p>Okalipuram, Bangalore</p>
+        </div>
+        <div class="school-logo">
+          <img src="https://i.ibb.co/nNwztjrm/bhavan-logo.png" alt="Bhavan Logo">
+        </div>
+        <iframe class="school-map" src="https://www.google.com/maps?q=Bhavan's+BBMP+School,+Okalipuram&output=embed" title="Bhavan Location"></iframe>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- IMPLEMENTATION -->
+<section class="section" style="background: var(--light-gray);">
+  <div class="container">
+    <h2 class="section-title">What We've Implemented</h2>
+    <div class="implementation-list">
+      <ul>
+        <li>Sanskrit Shloka chanting & bhajans</li>
+        <li>Subject-wise Sanskrit term integration</li>
+        <li>Sanskrit conversation with multimedia content (Vyoma Labs)</li>
+        <li>Digital Sanskrit Language Lab</li>
+        <li>Coaching for Prathama & Dwiteeya exams (SuraSaraswatiSabha)</li>
+        <li>Annual Yoga & Meditation Camps</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- PARTNERS -->
+<section class="section partners-section">
+  <div class="container">
+    <h2 class="section-title">Our Partners</h2>
+    <p class="section-subtitle">Collaborating for greater impact</p>
+    <div class="partners-grid">
+      
+      <div class="partner-card">
+        <a href="https://www.yogavijnana.in/" target="_blank">
+          <div class="partner-logo">
+            <img src="https://i.ibb.co/5X2S1ZP0/yogavijnana.jpg" alt="Yogavijnana Foundation">
+          </div>
+          <h3>Yogavijnana Foundation</h3>
+          <p>Promoting yoga and wellness education for holistic development</p>
+        </a>
+      </div>
+
+      <div class="partner-card">
+        <a href="https://www.wegopals.com/" target="_blank">
+          <div class="partner-logo">
+            <img src="https://esfqc9riepu.exactdn.com/wp-content/uploads/2023/11/GoPals-Logo.svg" alt="GoPals">
+          </div>
+          <h3>GoPals</h3>
+          <p>Supporting cow conservation and awareness programs</p>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- VIDEO GALLERY -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">See Our Impact</h2>
+    <p class="section-subtitle">Glimpses from our programs in action</p>
+    <div class="video-gallery">
+      <div class="video-wrapper">
+        <iframe src="https://drive.google.com/file/d/1QR9dCO0osvGEIPkXxlJhCTu6-g8pQ5tK/preview" title="Program Video 1"></iframe>
+      </div>
+      <div class="video-wrapper">
+        <iframe src="https://drive.google.com/file/d/1QUegWMR7m-05v0id2B9qzRlRbh_wYg2l/preview" title="Program Video 2"></iframe>
+      </div>
+      <div class="video-wrapper">
+        <iframe src="https://drive.google.com/file/d/1qVUtZdTSBG4crx8aMeW5Wj1OdznuJPxs/preview" title="Program Video 3"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ROAD AHEAD -->
+<section class="section" style="background: var(--warm-beige);">
+  <div class="container">
+    <h2 class="section-title">The Road Ahead</h2>
+    <p style="text-align:center;max-width:900px;margin:auto;font-size:1.15rem;line-height:1.8;color:var(--text-dark);">
+      <strong>Phase 3:</strong> We're expanding our reach to more schools, training additional teachers, digitalizing our tools, and implementing robust measurement systems to track outcomes and continuously improve our impact.
+    </p>
+  </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="cta-section">
+  <div class="container">
+    <h2>Join Our Mission</h2>
+    <p>Your support can transform the lives of children in underserved communities. Together, we can preserve heritage while building brighter futures.</p>
+    <div class="cta-buttons">
+      <a href="https://vyoma.org/donors/" class="btn btn-primary">Donate Now</a>
+      <a href="#" class="btn btn-secondary">Become a Partner</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSeqt3AcujP6rvwqMIsA9bemzO058dWIAGqKeYYXoIfNpeDR-g/viewform" class="btn btn-secondary">Volunteer With Us</a>
+    <!-- </div>
+    <div class="cta-links"> -->
+      <a href="https://drive.google.com/file/d/1rDDtDR_A3iSOneCkQRiH-bGgGhR2pFlh/view?usp=sharing" class="btn btn-secondary">Download Project Deck</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-content">
+    <div class="footer-info">
+      <p><strong>Contact Us : </strong>+91 - 9480865623</p>
+      <p><strong>Email : </strong><a href="mailto:support@vyomalabs.in">support@vyomalabs.in</a></p>
+    </div>
+    <div class="footer-info">
+      <p><strong>Vyoma Linguistic Labs Foundation</strong></p>
+      <p>Preserving Heritage • Empowering Communities • Building Futures</p>
+    </div>
+    <div class="social-links">
+  <a href="https://www.youtube.com/@vyoma-samskrta-pathasala" target="_blank" aria-label="YouTube">
+    <i class="fab fa-youtube"></i>
+  </a>
+  <a href="https://www.instagram.com/sanskrit_from_home/" target="_blank" aria-label="Instagram">
+    <i class="fab fa-instagram"></i>
+  </a>
+  <a href="https://www.linkedin.com/company/vyoma-linguistic-labs-foundation/" target="_blank" aria-label="LinkedIn">
+    <i class="fab fa-linkedin-in"></i>
+  </a>
+  <a href="https://www.facebook.com/Vyomalabs" target="_blank" aria-label="Facebook">
+    <i class="fab fa-facebook-f"></i>
+  </a>
+</div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Vyoma Linguistic Labs Foundation | All Rights Reserved</p>
+    </div>
+  </div>
+</footer>
+
+<!-- SCROLL PROGRESS BAR -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<script>
+// Scroll progress bar
+window.addEventListener('scroll', () => {
+  const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const scrolled = (winScroll / height) * 100;
+  document.getElementById('scrollProgress').style.width = scrolled + '%';
+});
+
+// Intersection Observer for scroll-triggered animations
+const observerOptions = {
+  threshold: 0.1,
+  rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.animationPlayState = 'running';
+      // Add a class for additional effects
+      entry.target.classList.add('animated');
+    }
+  });
+}, observerOptions);
+
+// Observe all animated elements
+const animatedElements = document.querySelectorAll(
+  '.section-title, .section-subtitle, .program-card, .school-card, ' +
+  '.partner-card, .video-wrapper, .implementation-list li, .stat-item, .quote-box'
+);
+
+animatedElements.forEach(el => {
+  el.style.animationPlayState = 'paused';
+  observer.observe(el);
+});
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  });
+});
+
+// Add parallax effect to hero section
+let ticking = false;
+window.addEventListener('scroll', () => {
+  if (!ticking) {
+    window.requestAnimationFrame(() => {
+      const scrolled = window.pageYOffset;
+      const hero = document.querySelector('.hero');
+      if (hero && scrolled < hero.offsetHeight) {
+        // Subtle parallax effect - only moves background
+        hero.style.backgroundPositionY = `${scrolled * 0.3}px`;
+      }
+      ticking = false;
+    });
+    ticking = true;
+  }
+});
+
+// Add stagger animation to grid items on scroll
+const staggerObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const children = entry.target.children;
+      Array.from(children).forEach((child, index) => {
+        setTimeout(() => {
+          child.style.opacity = '1';
+          child.style.transform = 'translateY(0)';
+        }, index * 100);
+      });
+      staggerObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.programs-grid, .schools-grid').forEach(grid => {
+  staggerObserver.observe(grid);
+});
+</script>
+
+</body>
+</html
